@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Playpen+Sans&display=swap');
+.layout {
+    margin: 0;
+}
+
+
+/* Contoh gaya untuk header, navbar, dan konten */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #10b9cc;
+    padding: 1rem;
+}
+
+.header h1 {
+    color: white;
+    margin: 0;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #45a049;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
