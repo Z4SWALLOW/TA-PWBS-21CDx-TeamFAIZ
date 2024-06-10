@@ -32,14 +32,21 @@ export default function MainLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         />
       </head>
+<<<<<<< HEAD
       
 
       <body className={style.layout}>
       <header className={`${style.header}`}>
+=======
+
+      <body className={style.layout}>
+        <header className={`${style.header}`}>
+>>>>>>> 6bbbd4273ecd477d4b76df6d85033fbc115673cc
           <div><h1>WonderfulSea</h1></div>
           <nav>
             <ul className={`${style.navbar}`}>
               <li><a href="beranda">Beranda</a></li>
+<<<<<<< HEAD
               <li><a href="/">Tambah Data</a></li>
             </ul>
             <div></div>
@@ -50,8 +57,23 @@ export default function MainLayout({
         </section>
 
 
+=======
+              <li><a href="">Tambah Data</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <section className={`${style.content} ${style.content_bg}`}>
+          {children}
+        </section>
+
+>>>>>>> 6bbbd4273ecd477d4b76df6d85033fbc115673cc
         <footer className={style.footer}>&copy; 2024 | PWBS - IF 21 CDX</footer>
       </body>
     </html>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6bbbd4273ecd477d4b76df6d85033fbc115673cc

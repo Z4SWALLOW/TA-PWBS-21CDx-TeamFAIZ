@@ -34,6 +34,7 @@ export default function ViewPage() {
   );
 
   // buat fungsi untuk hapus data
+<<<<<<< HEAD
  // buat fungsi untuk hapus data
  const setDelete = (no: string, nama: string) => {
   // alert(`Data Mahasiswa : ${nama} Ingin Dihapus ?`);
@@ -59,6 +60,32 @@ export default function ViewPage() {
       .catch(() => console.error("Data Gagal Dikirim !"));
   }
 };
+=======
+  const setDelete = (id: string, nama: string) => {
+    // alert(`Data Mahasiswa : ${nama} Ingin Dihapus ?`);
+
+    // konfirmasi hapus data
+    // jika tombol "Ok" dipilih
+    if (confirm(`Data Hewanlaut : ${nama} Ingin Dihapus ?`) == true) {
+      // buat variabel untuk hash "no"
+      let id_hash = btoa(id);
+      // ambil service "delete" dari service
+      fetch(`${process.env.API}/delete/${id_hash}`, {
+        method: "DELETE",
+      })
+        // response (format json)
+        .then((response) => response.json())
+        // result (hasil dari "response")
+        .then((result) => {
+          alert(result.message);
+          // refresh data
+          mutate(data);
+        })
+        // jika proses "fetch" bermasalah
+        .catch(() => console.error("Data Gagal Dikirim !"));
+    }
+  };
+>>>>>>> 6bbbd4273ecd477d4b76df6d85033fbc115673cc
 
   let data_number = 1
 
@@ -135,6 +162,12 @@ export default function ViewPage() {
             <th className="w-auto border-2 border-slate-300 bg-black text-white h-10 text-center">
               Deskripsi
             </th>
+<<<<<<< HEAD
+=======
+            <th className="w-auto border-2 border-slate-300 bg-black text-white h-10 text-center">
+              Gambar
+            </th>
+>>>>>>> 6bbbd4273ecd477d4b76df6d85033fbc115673cc
           </tr>
         </thead>
 
@@ -163,7 +196,11 @@ export default function ViewPage() {
                 <tr key={item.id_hewanlaut}>
                   <td className="border-2 border-slate-300 bg-white text-black h-8 text-center p-3">
                     <Link
+<<<<<<< HEAD
                       href={`/edit/${btoa(item.no_hewanlaut)}`}
+=======
+                      href={`/edit/${btoa(item.id_hewanlaut)}`}
+>>>>>>> 6bbbd4273ecd477d4b76df6d85033fbc115673cc
                       className="bg-sky-700 text-white px-3 py-2 rounded-md mr-1"
                     >
                       <i className="fa-solid fa-pencil"></i>
@@ -172,14 +209,22 @@ export default function ViewPage() {
                       href={"/"}
                       className="bg-rose-700 text-white px-3 py-2 rounded-md ml-1"
                       onClick={(e) =>
+<<<<<<< HEAD
                         setDelete(item.no_hewanlaut, item.nama_hewanlaut)
+=======
+                        setDelete(item.id_hewanlaut, item.nama_hewanlaut)
+>>>>>>> 6bbbd4273ecd477d4b76df6d85033fbc115673cc
                       }
                     >
                       <i className="fa-solid fa-trash-can"></i>
                     </Link>
                   </td>
                   <td className="border-2 border-slate-300 bg-white text-black h-8 text-center">
+<<<<<<< HEAD
                     {data_number++}
+=======
+                    {item.id_hewanlaut}
+>>>>>>> 6bbbd4273ecd477d4b76df6d85033fbc115673cc
                   </td>
                   <td className="border-2 border-slate-300 bg-white text-black h-8 text-center">
                     {item.nama_hewanlaut}
@@ -190,6 +235,12 @@ export default function ViewPage() {
                   <td className="border-2 border-slate-300 bg-white text-black h-8 text-center">
                     {item.deskripsi_hewanlaut}
                   </td>
+<<<<<<< HEAD
+=======
+                  <td className="border-2 border-slate-300 bg-white text-black h-8 text-justify">
+                    {item.gambar_hewanlaut}
+                  </td>
+>>>>>>> 6bbbd4273ecd477d4b76df6d85033fbc115673cc
                 </tr>
               ))
             )
