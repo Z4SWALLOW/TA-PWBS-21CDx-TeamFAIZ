@@ -34,6 +34,9 @@ export default function MainLayout({
       </head>
 
       <body className={style.layout}>
+      <section className={`${style.content} ${style.content_bg}`} style={{ backgroundImage: "url('https://asset-a.grid.id/crop/0x0:0x0/x/photo/2019/02/01/822975623.jpg')" }}>
+  {children}
+</section>
         <header className={`${style.header}`}>
           <div><h1>WonderfulSea</h1></div>
           <nav>
@@ -43,10 +46,6 @@ export default function MainLayout({
             </ul>
           </nav>
         </header>
-
-        <section className={`${style.content} ${style.content_bg}`}>
-          {children}
-        </section>
 
         <footer className={style.footer}>&copy; 2024 | PWBS - IF 21 CDX</footer>
       </body>
